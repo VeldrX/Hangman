@@ -13,20 +13,27 @@ import (
 // 	Asccitype    string
 // }
 
-func Hangadvanced() {
-	imputcorect := true
+func MakeStruct() *HangManData {
+
 	Myhangman := new(HangManData)
+
+	fileword := "words1.txt"
+	Myhangman.WordToFind = GetWord(fileword, Myhangman)
+	Myhangman.Word = GetInitLetters(Myhangman.WordToFind)
+	Myhangman.Attempts = 10
+
+	return Myhangman
+}
+func RunGame() {
+	imputcorect := true
 
 	argu := os.Args
 	if len(argu) < 2 {
 		fmt.Println("il manque un argument")
 		os.Exit(1)
 	}
-	fileword := argu[1]
-	Myhangman.WordToFind = GetWord(fileword, Myhangman)
-	Myhangman.Word = GetInitLetters(Myhangman.WordToFind)
-	Myhangman.Attempts = 10
 
+	Myhangman := MakeStruct()
 	fmt.Println("!!! WELCOME  TO  THE  HANGED-MAN  GAME !!!")
 	fmt.Println()
 	Display(Myhangman.Word)
