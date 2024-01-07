@@ -1,24 +1,22 @@
 package hangman
 
 import (
-	hangman "command-line-arguments/home/mathisvassy/Devellopement/hangclone/hangman/hangmanadvanced.go"
 	"fmt"
 	"os"
 )
 
-type HangManData struct {
-	Word         []rune // Word composed of '_', ex: H_ll_
-	WordToFind   []rune // Final word chosen by the program at the beginning. It is the word to find
-	Attempts     int    // Number of attempts left
-	WrongLetters []rune
-	Asccitype    string
-}
+// type HangManData struct {
+// 	Word         []rune // Word composed of '_', ex: H_ll_
+// 	WordToFind   []rune // Final word chosen by the program at the beginning. It is the word to find
+// 	Attempts     int    // Number of attempts left
+// 	WrongLetters []rune
+// 	Asccitype    string
+// }
 
-func MakeStruct() *HangManData {
+func MakeStruct(fileword string) *HangManData {
 
 	Myhangman := new(HangManData)
 
-	fileword := "words1.txt"
 	Myhangman.WordToFind = hangman.GetWord(fileword, Myhangman)
 	Myhangman.Word = hangman.GetInitLetters(Myhangman.WordToFind)
 	Myhangman.Attempts = 10
