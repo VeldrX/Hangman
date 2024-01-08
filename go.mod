@@ -1,3 +1,3 @@
-module github.com/VeldrX/hangman
+module hangman
 
 go 1.21.0

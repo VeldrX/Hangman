@@ -3,6 +3,8 @@ package hangman
 import (
 	"fmt"
 	"os"
+
+	"github.com/VeldrX/hangman"
 )
 
 // type HangManData struct {
@@ -31,7 +33,7 @@ func NotRunGame() {
 		os.Exit(1)
 	}
 
-	Myhangman := MakeStruct()
+	Myhangman := MakeStruct("words1.txt")
 	fmt.Println("!!! WELCOME  TO  THE  HANGED-MAN  GAME !!!")
 	fmt.Println()
 	Display(Myhangman.Word)
