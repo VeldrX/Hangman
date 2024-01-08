@@ -3,8 +3,6 @@ package hangman
 import (
 	"fmt"
 	"os"
-
-	"github.com/VeldrX/hangman"
 )
 
 // type HangManData struct {
@@ -19,8 +17,8 @@ func MakeStruct(fileword string) *HangManData {
 
 	Myhangman := new(HangManData)
 
-	Myhangman.WordToFind = hangman.GetWord(fileword, Myhangman)
-	Myhangman.Word = hangman.GetInitLetters(Myhangman.WordToFind)
+	Myhangman.WordToFind = GetWord(fileword, Myhangman)
+	Myhangman.Word = GetInitLetters(Myhangman.WordToFind)
 	Myhangman.Attempts = 10
 
 	return Myhangman
