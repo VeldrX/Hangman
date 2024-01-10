@@ -5,13 +5,13 @@ import (
 	"os"
 )
 
-// type HangManData struct {
-// 	Word         []rune // Word composed of '_', ex: H_ll_
-// 	WordToFind   []rune // Final word chosen by the program at the beginning. It is the word to find
-// 	Attempts     int    // Number of attempts left
-// 	WrongLetters []rune
-// 	Asccitype    string
-// }
+type HangManData struct {
+	Word         []rune // Word composed of '_', ex: H_ll_
+	WordToFind   []rune // Final word chosen by the program at the beginning. It is the word to find
+	Attempts     int    // Number of attempts left
+	WrongLetters []rune
+	Asccitype    string
+}
 
 func MakeStruct(fileword string) *HangManData {
 
