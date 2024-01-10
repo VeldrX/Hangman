@@ -61,10 +61,7 @@ func Checkletter(imput_in_rune []rune, imputcorect bool, Myhangman *HangManData)
 					compteur_egal += 1
 				}
 			}
-			if compteur_egal == len(Myhangman.WordToFind) && Myhangman.Attempts > 0 {
-				fmt.Println("BRAVO vous avez Gagné")
-				os.Exit(0)
-			}
+
 		}
 	}
 }
